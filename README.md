@@ -221,14 +221,15 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 **Assignment:** Document-Based Question Answering System  
 **Institution:** BITS Pilani
 
-## � Documentation
+## 📚 Documentation
 
 | Document | Description |
 |----------|-------------|
 | [SETUP.md](SETUP.md) | Detailed local setup instructions |
 | [docs/DESIGN_REPORT.md](docs/DESIGN_REPORT.md) | Design choices & implementation challenges |
 | [docs/enhancement_plan.md](docs/enhancement_plan.md) | Task B - Enhancement recommendations |
+| [docs/ENHANCEMENT_DETAILED.md](docs/ENHANCEMENT_DETAILED.md) | Advanced enhancements with code examples |
 
-## �📄 License
+## � License
 
 This project is for educational purposes only.
