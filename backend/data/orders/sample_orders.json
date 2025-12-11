@@ -1,0 +1,304 @@
+{
+  "orders": [
+    {
+      "order_id": "TM-2024-001234",
+      "customer_name": "John Smith",
+      "customer_email": "john.smith@email.com",
+      "order_date": "2025-12-01",
+      "status": "Delivered",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-12-01T10:30:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-12-01T11:45:00Z", "description": "Payment confirmed"},
+        {"status": "Shipped", "timestamp": "2025-12-02T09:15:00Z", "description": "Package dispatched"},
+        {"status": "In Transit", "timestamp": "2025-12-03T14:20:00Z", "description": "Package in transit"},
+        {"status": "Out for Delivery", "timestamp": "2025-12-05T08:00:00Z", "description": "With delivery driver"},
+        {"status": "Delivered", "timestamp": "2025-12-05T14:35:00Z", "description": "Delivered to recipient"}
+      ],
+      "tracking_number": "1Z999AA10123456784",
+      "carrier": "UPS",
+      "shipping_method": "Express Shipping",
+      "estimated_delivery": "2025-12-05",
+      "actual_delivery": "2025-12-05",
+      "shipping_address": {
+        "street": "123 Main Street",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94102",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-LAP-PRO15",
+          "name": "TechMart Pro Laptop 15",
+          "quantity": 1,
+          "price": 1299.00
+        },
+        {
+          "sku": "TM-ACC-SLV15",
+          "name": "TechMart Laptop Sleeve 15\"",
+          "quantity": 1,
+          "price": 35.00
+        }
+      ],
+      "subtotal": 1334.00,
+      "shipping_cost": 0.00,
+      "tax": 116.72,
+      "total": 1450.72,
+      "payment_method": "Credit Card (****1234)"
+    },
+    {
+      "order_id": "TM-2024-001235",
+      "customer_name": "Sarah Johnson",
+      "customer_email": "sarah.j@email.com",
+      "order_date": "2025-12-05",
+      "status": "In Transit",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-12-05T15:20:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-12-05T16:00:00Z", "description": "Payment confirmed"},
+        {"status": "Shipped", "timestamp": "2025-12-06T10:30:00Z", "description": "Package dispatched"},
+        {"status": "In Transit", "timestamp": "2025-12-07T08:45:00Z", "description": "Package at regional facility"}
+      ],
+      "tracking_number": "9400111899223334445566",
+      "carrier": "USPS",
+      "shipping_method": "Standard Shipping",
+      "estimated_delivery": "2025-12-12",
+      "actual_delivery": null,
+      "shipping_address": {
+        "street": "456 Oak Avenue",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-PHN-X",
+          "name": "TechMart Smartphone X",
+          "quantity": 1,
+          "price": 899.00
+        }
+      ],
+      "subtotal": 899.00,
+      "shipping_cost": 5.99,
+      "tax": 78.66,
+      "total": 983.65,
+      "payment_method": "PayPal"
+    },
+    {
+      "order_id": "TM-2024-001236",
+      "customer_name": "Mike Chen",
+      "customer_email": "mike.chen@email.com",
+      "order_date": "2025-12-08",
+      "status": "Processing",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-12-08T09:15:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-12-08T10:30:00Z", "description": "Payment confirmed, preparing shipment"}
+      ],
+      "tracking_number": null,
+      "carrier": "FedEx",
+      "shipping_method": "Next-Day Delivery",
+      "estimated_delivery": "2025-12-09",
+      "actual_delivery": null,
+      "shipping_address": {
+        "street": "789 Pine Road",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98101",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-AUD-WHP",
+          "name": "TechMart Wireless Headphones Pro",
+          "quantity": 2,
+          "price": 199.00
+        },
+        {
+          "sku": "TM-ACC-WCP",
+          "name": "TechMart Wireless Charging Pad",
+          "quantity": 1,
+          "price": 29.00
+        }
+      ],
+      "subtotal": 427.00,
+      "shipping_cost": 24.99,
+      "tax": 39.57,
+      "total": 491.56,
+      "payment_method": "Credit Card (****5678)"
+    },
+    {
+      "order_id": "TM-2024-001237",
+      "customer_name": "Emily Davis",
+      "customer_email": "emily.d@email.com",
+      "order_date": "2025-12-10",
+      "status": "Shipped",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-12-10T14:00:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-12-10T14:30:00Z", "description": "Payment confirmed"},
+        {"status": "Shipped", "timestamp": "2025-12-11T08:00:00Z", "description": "Package dispatched from warehouse"}
+      ],
+      "tracking_number": "794644790132",
+      "carrier": "FedEx",
+      "shipping_method": "Express Shipping",
+      "estimated_delivery": "2025-12-13",
+      "actual_delivery": null,
+      "shipping_address": {
+        "street": "321 Elm Street",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60601",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-WRB-SWP",
+          "name": "TechMart Smart Watch Pro",
+          "quantity": 1,
+          "price": 349.00
+        }
+      ],
+      "subtotal": 349.00,
+      "shipping_cost": 0.00,
+      "tax": 36.15,
+      "total": 385.15,
+      "payment_method": "Apple Pay"
+    },
+    {
+      "order_id": "TM-2024-001238",
+      "customer_name": "Robert Wilson",
+      "customer_email": "r.wilson@email.com",
+      "order_date": "2025-12-11",
+      "status": "Pending",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-12-11T16:45:00Z", "description": "Order placed, awaiting payment confirmation"}
+      ],
+      "tracking_number": null,
+      "carrier": "UPS",
+      "shipping_method": "Standard Shipping",
+      "estimated_delivery": "2025-12-18",
+      "actual_delivery": null,
+      "shipping_address": {
+        "street": "555 Maple Drive",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "78701",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-LAP-GAM17",
+          "name": "TechMart Gaming Laptop 17",
+          "quantity": 1,
+          "price": 1899.00
+        }
+      ],
+      "subtotal": 1899.00,
+      "shipping_cost": 0.00,
+      "tax": 156.67,
+      "total": 2055.67,
+      "payment_method": "Affirm (12-month financing)"
+    },
+    {
+      "order_id": "TM-2024-001239",
+      "customer_name": "Lisa Martinez",
+      "customer_email": "lisa.m@email.com",
+      "order_date": "2025-11-28",
+      "status": "Return Initiated",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-11-28T11:00:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-11-28T11:30:00Z", "description": "Payment confirmed"},
+        {"status": "Shipped", "timestamp": "2025-11-29T09:00:00Z", "description": "Package dispatched"},
+        {"status": "Delivered", "timestamp": "2025-12-02T13:20:00Z", "description": "Delivered to recipient"},
+        {"status": "Return Initiated", "timestamp": "2025-12-09T10:15:00Z", "description": "Return request submitted - Item defective"}
+      ],
+      "tracking_number": "1Z999BB20234567891",
+      "carrier": "UPS",
+      "shipping_method": "Express Shipping",
+      "estimated_delivery": "2025-12-02",
+      "actual_delivery": "2025-12-02",
+      "return_tracking": "1Z999BB20234567899",
+      "return_status": "Return label sent, awaiting package",
+      "shipping_address": {
+        "street": "888 Cedar Lane",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33101",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-AUD-WEB",
+          "name": "TechMart Wireless Earbuds",
+          "quantity": 1,
+          "price": 129.00
+        }
+      ],
+      "subtotal": 129.00,
+      "shipping_cost": 12.99,
+      "tax": 9.94,
+      "total": 151.93,
+      "payment_method": "Credit Card (****9012)",
+      "return_reason": "Defective - Left earbud not working"
+    },
+    {
+      "order_id": "TM-2024-001240",
+      "customer_name": "David Brown",
+      "customer_email": "d.brown@email.com",
+      "order_date": "2025-11-25",
+      "status": "Refund Processed",
+      "status_history": [
+        {"status": "Pending", "timestamp": "2025-11-25T08:30:00Z", "description": "Order placed"},
+        {"status": "Processing", "timestamp": "2025-11-25T09:00:00Z", "description": "Payment confirmed"},
+        {"status": "Shipped", "timestamp": "2025-11-26T10:00:00Z", "description": "Package dispatched"},
+        {"status": "Delivered", "timestamp": "2025-11-29T11:45:00Z", "description": "Delivered to recipient"},
+        {"status": "Return Initiated", "timestamp": "2025-12-05T14:00:00Z", "description": "Return request - Changed mind"},
+        {"status": "Refund Processed", "timestamp": "2025-12-10T09:30:00Z", "description": "Refund of $68.06 issued to original payment method"}
+      ],
+      "tracking_number": "9261290100130417987941",
+      "carrier": "USPS",
+      "shipping_method": "Standard Shipping",
+      "estimated_delivery": "2025-11-30",
+      "actual_delivery": "2025-11-29",
+      "return_tracking": "9261290100130417987958",
+      "return_status": "Return received and processed",
+      "refund_amount": 68.06,
+      "refund_date": "2025-12-10",
+      "shipping_address": {
+        "street": "222 Birch Court",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "80201",
+        "country": "USA"
+      },
+      "items": [
+        {
+          "sku": "TM-WRB-FB",
+          "name": "TechMart Fitness Band",
+          "quantity": 1,
+          "price": 79.00
+        }
+      ],
+      "subtotal": 79.00,
+      "shipping_cost": 0.00,
+      "tax": 6.24,
+      "total": 85.24,
+      "payment_method": "Debit Card (****3456)",
+      "return_reason": "Changed mind - No longer needed",
+      "restocking_fee": 11.19
+    }
+  ],
+  "tracking_carriers": {
+    "UPS": {
+      "tracking_url": "https://www.ups.com/track?tracknum=",
+      "phone": "1-800-742-5877"
+    },
+    "FedEx": {
+      "tracking_url": "https://www.fedex.com/fedextrack/?trknbr=",
+      "phone": "1-800-463-3339"
+    },
+    "USPS": {
+      "tracking_url": "https://tools.usps.com/go/TrackConfirmAction?tLabels=",
+      "phone": "1-800-275-8777"
+    }
+  }
+}

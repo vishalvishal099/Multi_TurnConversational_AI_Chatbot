@@ -1,0 +1,215 @@
+{
+  "source": "Doc2Dial",
+  "patterns": [
+    {
+      "domain": "customer_support",
+      "pattern_type": "information_seeking",
+      "turns": [
+        {
+          "role": "user",
+          "utterance": "What are the available options?",
+          "intent": "query_options"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Lists available options from document]",
+          "grounding": "document_section"
+        },
+        {
+          "role": "user",
+          "utterance": "What about the second one?",
+          "intent": "follow_up"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Details about second option]",
+          "grounding": "specific_item"
+        }
+      ]
+    },
+    {
+      "domain": "customer_support",
+      "pattern_type": "pronoun_resolution",
+      "turns": [
+        {
+          "role": "user",
+          "utterance": "Tell me about [Product X]",
+          "intent": "product_inquiry"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Product details]",
+          "grounding": "product_specs"
+        },
+        {
+          "role": "user",
+          "utterance": "How much does it cost?",
+          "intent": "price_inquiry"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Price of Product X]",
+          "grounding": "resolved_reference"
+        }
+      ]
+    },
+    {
+      "domain": "customer_support",
+      "pattern_type": "topic_switch",
+      "turns": [
+        {
+          "role": "user",
+          "utterance": "I'm interested in [Product]",
+          "intent": "product_interest"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Product information]",
+          "grounding": "product_info"
+        },
+        {
+          "role": "user",
+          "utterance": "How do I return it if I don't like it?",
+          "intent": "return_inquiry"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Return policy for product]",
+          "grounding": "policy_document"
+        }
+      ]
+    },
+    {
+      "domain": "customer_support",
+      "pattern_type": "clarification",
+      "turns": [
+        {
+          "role": "user",
+          "utterance": "My device isn't working",
+          "intent": "troubleshooting"
+        },
+        {
+          "role": "agent",
+          "utterance": "Which device are you having issues with?",
+          "grounding": "clarification_request"
+        },
+        {
+          "role": "user",
+          "utterance": "The laptop",
+          "intent": "specification"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Laptop troubleshooting steps]",
+          "grounding": "troubleshooting_guide"
+        }
+      ]
+    },
+    {
+      "domain": "customer_support",
+      "pattern_type": "ellipsis_resolution",
+      "turns": [
+        {
+          "role": "user",
+          "utterance": "What's the price of the laptop?",
+          "intent": "price_inquiry"
+        },
+        {
+          "role": "agent",
+          "utterance": "The laptop costs $X",
+          "grounding": "price_info"
+        },
+        {
+          "role": "user",
+          "utterance": "And the warranty?",
+          "intent": "ellipsis_follow_up"
+        },
+        {
+          "role": "agent",
+          "utterance": "[Warranty information for laptop]",
+          "grounding": "warranty_info"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "pattern": "follow_up_question",
+      "description": "User asks about something mentioned in previous response",
+      "examples": [
+        {
+          "user": "What products do you have?",
+          "bot": "[lists products]",
+          "follow_up": "What about the laptop?"
+        },
+        {
+          "user": "Tell me about shipping",
+          "bot": "[shipping info]",
+          "follow_up": "How long does express take?"
+        }
+      ]
+    },
+    {
+      "pattern": "pronoun_resolution",
+      "description": "User refers to previous entity with pronoun",
+      "examples": [
+        {
+          "context": "User asked about Pro Laptop",
+          "query": "How much does it cost?",
+          "resolution": "Pro Laptop"
+        },
+        {
+          "context": "User asked about return policy",
+          "query": "Is it the same for electronics?",
+          "resolution": "return policy"
+        }
+      ]
+    },
+    {
+      "pattern": "ellipsis_completion",
+      "description": "User omits parts of question assuming context",
+      "examples": [
+        {
+          "context": "Discussing product prices",
+          "query": "And the headphones?",
+          "completion": "What is the price of the headphones?"
+        },
+        {
+          "context": "Discussing shipping options",
+          "query": "International?",
+          "completion": "What about international shipping?"
+        }
+      ]
+    },
+    {
+      "pattern": "clarification_request",
+      "description": "User asks for more details",
+      "examples": [
+        {
+          "trigger": "Can you explain more?",
+          "action": "Provide additional details from document"
+        },
+        {
+          "trigger": "What do you mean by...",
+          "action": "Clarify specific term or concept"
+        }
+      ]
+    },
+    {
+      "pattern": "topic_switch",
+      "description": "User changes topic but may reference previous context",
+      "examples": [
+        {
+          "from": "products",
+          "to": "shipping",
+          "query": "How would I get that shipped?"
+        },
+        {
+          "from": "troubleshooting",
+          "to": "warranty",
+          "query": "Is this covered under warranty?"
+        }
+      ]
+    }
+  ]
+}

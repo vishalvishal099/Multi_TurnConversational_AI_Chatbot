@@ -1,0 +1,5 @@
+- [x] Understand assignment requirements and constraints (open-source dataset, open-source LLM, RAG pipeline).
+- [x] Draft detailed step-by-step implementation plan for chatbot project (Part A).
+- [x] Outline enhancement plan recommendations (Task B requirements).
+- [x] Outline literature survey structure and approach (Part B).
+- [x] Review plan to ensure all deliverables covered and share with user.
