@@ -1,6 +1,6 @@
 # Design Report: Multi-Turn Conversational AI Chatbot
 
-**Course:** Natural Language Processing  
+**Course:** Natural Language Processing Applications  
 **Assignment:** Document-Based Question Answering System  
 **Institution:** BITS Pilani  
 **Date:** December 2025

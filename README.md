@@ -217,7 +217,7 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 
 ## 🎓 Academic Information
 
-**Course:** Natural Language Processing  
+**Course:** Natural Language Processing Applications  
 **Assignment:** Document-Based Question Answering System  
 **Institution:** BITS Pilani
 
@@ -227,9 +227,27 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 |----------|-------------|
 | [SETUP.md](SETUP.md) | Detailed local setup instructions |
 | [docs/DESIGN_REPORT.md](docs/DESIGN_REPORT.md) | Design choices & implementation challenges |
+| [docs/LITERATURE_REVIEW.md](docs/LITERATURE_REVIEW.md) | Academic literature review (Part B) |
 | [docs/enhancement_plan.md](docs/enhancement_plan.md) | Task B - Enhancement recommendations |
 | [docs/ENHANCEMENT_DETAILED.md](docs/ENHANCEMENT_DETAILED.md) | Advanced enhancements with code examples |
 
-## � License
+### 📄 Converting Literature Review to PDF
+
+```bash
+# Option 1: Using Pandoc (recommended)
+brew install pandoc basictex  # macOS
+pandoc docs/LITERATURE_REVIEW.md -o docs/LITERATURE_REVIEW.pdf \
+  --pdf-engine=pdflatex \
+  -V geometry:margin=1in \
+  -V fontsize=11pt
+
+# Option 2: Using VS Code
+# Install "Markdown PDF" extension, right-click → "Export (pdf)"
+
+# Option 3: Online converter
+# Upload to https://www.markdowntopdf.com/
+```
+
+## 📄 License
 
 This project is for educational purposes only.

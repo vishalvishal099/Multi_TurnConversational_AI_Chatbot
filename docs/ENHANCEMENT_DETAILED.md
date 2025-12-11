@@ -1,7 +1,7 @@
 # Advanced Enhancement Documentation
 ## TechMart Conversational AI Chatbot - Detailed Improvement Guide
 
-**Course:** Natural Language Processing  
+**Course:** Natural Language Processing Applications  
 **Task B:** System Enhancement Recommendations  
 **Institution:** BITS Pilani  
 **Date:** December 2025
@@ -1602,4 +1602,4 @@ Just let me know and I'll do my best to assist!
 
 *Document Version: 2.0*  
 *Last Updated: December 2025*  
-*Course: Natural Language Processing - BITS Pilani*
+*Course: Natural Language Processing Applications - BITS Pilani*
