@@ -67,16 +67,39 @@ NLP_Assignment/
 │   └── package.json
 ├── docs/
 │   └── enhancement_plan.md       # Task B documentation
-└── README.md
+├── README.md
+└── SETUP.md                      # Detailed setup instructions
 ```
 
 ## 🚀 Getting Started
+
+> 📖 **For detailed setup instructions, see [SETUP.md](SETUP.md)**
 
 ### Prerequisites
 
 1. **Python 3.10+**
 2. **Node.js 18+**
 3. **Ollama** - Install from [ollama.ai](https://ollama.ai)
+
+### Quick Start (3 Terminals)
+
+```bash
+# Terminal 1: Start Ollama
+ollama serve
+
+# Terminal 2: Start Backend (first time setup)
+cd backend
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python3 -m uvicorn app:app --host 0.0.0.0 --port 8001
+
+# Terminal 3: Start Frontend
+cd frontend
+npm install
+npm run dev
+```
+
+Then open **http://localhost:5173** in your browser.
 
 ### Step 1: Start Ollama
 
@@ -198,6 +221,14 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 **Assignment:** Document-Based Question Answering System  
 **Institution:** BITS Pilani
 
-## 📄 License
+## � Documentation
+
+| Document | Description |
+|----------|-------------|
+| [SETUP.md](SETUP.md) | Detailed local setup instructions |
+| [docs/DESIGN_REPORT.md](docs/DESIGN_REPORT.md) | Design choices & implementation challenges |
+| [docs/enhancement_plan.md](docs/enhancement_plan.md) | Task B - Enhancement recommendations |
+
+## �📄 License
 
 This project is for educational purposes only.
