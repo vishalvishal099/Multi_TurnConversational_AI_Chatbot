@@ -350,85 +350,107 @@ response = rag_pipeline.generate_response(
 
 ---
 
-## 5. Performance Metrics
 
-### 5.1 Response Times (Measured)
+## 5. Lessons Learned
 
-| Metric | Time | Notes |
-|--------|------|-------|
-| First query (cold start) | 15-30s | Includes model loading |
-| Subsequent queries | 2-5s | Model in memory |
-| Vector retrieval | <100ms | ChromaDB optimized |
-| Frontend render | <50ms | React virtual DOM |
-
-### 5.2 Memory Usage
-
-| Component | Memory |
-|-----------|--------|
-| Mistral 7B (CPU) | ~6GB |
-| ChromaDB | ~200MB |
-| Embeddings model | ~400MB |
-| FastAPI server | ~100MB |
-| **Total** | **~7GB** |
-
-### 5.3 Knowledge Base Statistics
-
-| Metric | Value |
-|--------|-------|
-| Total documents | 1 (techmart_support.md) |
-| Total chunks | 63 |
-| Chunk size | 500 chars |
-| Embedding dimensions | 384 |
-
----
-
-## 6. Testing Strategy
-
-### 6.1 Test Categories
-
-| Category | Questions Tested | Pass Rate |
-|----------|------------------|-----------|
-| Product Information | 5 | 100% |
-| Order & Shipping | 5 | 100% |
-| Returns & Refunds | 5 | 100% |
-| Troubleshooting | 5 | 80% |
-| Multi-turn Dialogue | 5 | 80% |
-
-### 6.2 Multi-Turn Test Results
-
-| Test Sequence | Result |
-|---------------|--------|
-| Product → "How much does it cost?" | ✅ Correct pronoun resolution |
-| Shipping → "And international?" | ✅ Ellipsis handled |
-| Laptop info → "Can I return it?" | ✅ Topic switch with reference |
-| "My device isn't working" | ✅ Clarification requested |
-| 5-turn conversation | ✅ Context maintained |
-
----
-
-## 7. Lessons Learned
-
-### 7.1 What Worked Well
+### 5.1 What Worked Well
 
 1. **LangChain abstraction** - Simplified RAG implementation significantly
 2. **Doc2Dial patterns** - Improved multi-turn handling quality
 3. **Modular architecture** - Easy to debug and extend
 4. **Local LLM** - No API dependencies or costs
 
-### 7.2 What Could Be Improved
+### 5.2 What Could Be Improved
 
 1. **Streaming responses** - Currently waits for full generation
 2. **Caching** - Repeated queries could be cached
 3. **Fine-tuning** - Custom model for TechMart domain
 4. **Evaluation metrics** - Automated BLEU/ROUGE scoring
 
-### 7.3 Future Enhancements
-
-See [enhancement_plan.md](enhancement_plan.md) for detailed Task B recommendations.
 
 ---
 
-## 8. Conclusion
+## 6. Application Screenshots
+
+This section demonstrates the complete flow of the TechMart Conversational AI Chatbot through screenshots.
+
+### 6.1 Application Launch - Home Screen
+*Screenshot: Initial chat interface with TechMart branding and welcome message*
+
+![Home Screen](./screenshots/01_home_screen.png)
+
+**Description:** The landing page displays the TechMart logo with animated styling, a clean chat interface, and quick action buttons for common queries (Products, Order Status, Returns, Technical Support, Payment).
+
+---
+
+### 6.2 Product Information Query
+*Screenshot: User asking about available products*
+
+![Product Query](./screenshots/02_product_query.png)
+
+**Description:** Demonstrates the RAG pipeline retrieving relevant product information from the knowledge base. The response includes product names, specifications, and pricing.
+
+---
+
+### 6.3 Order Status Tracking
+*Screenshot: User tracking an order with order ID*
+
+![Order Tracking](./screenshots/03_order_tracking.png)
+
+**Description:** Shows the order management system in action. User queries with order ID (TM-2024-001234) and receives real-time status, shipping details, and estimated delivery.
+
+---
+
+### 6.4 Multi-Turn Conversation (Context Retention)
+*Screenshot: Follow-up question demonstrating pronoun resolution*
+
+![Multi-Turn](./screenshots/04_multi_turn.png)
+
+**Description:** This screenshot illustrates the multi-turn capability. After asking about smartphones, the user follows up with "What's the price?" - the system correctly resolves "it" to the previously discussed product using Doc2Dial dialogue patterns.
+
+---
+
+### 6.5 Returns & Refund Policy
+*Screenshot: User inquiring about return process*
+
+![Returns Policy](./screenshots/05_returns_policy.png)
+
+**Description:** The chatbot provides comprehensive return policy information retrieved from the TechMart knowledge base, including timelines, conditions, and refund process.
+
+---
+
+### 6.6 Technical Troubleshooting
+*Screenshot: User seeking technical support*
+
+![Technical Support](./screenshots/06_technical_support.png)
+
+**Description:** Demonstrates the troubleshooting capability with step-by-step guidance for common technical issues like device not turning on.
+
+---
+
+### 6.7 Backend Health Status (Terminal)
+*Screenshot: Health check API response*
+
+![Backend Health](./screenshots/07_backend_health.png)
+
+**Description:** Terminal output showing the backend health check endpoint response, confirming RAG initialization, active sessions, and system status.
+
+```json
+{
+  "status": "healthy",
+  "rag_initialized": true,
+  "active_sessions": 1,
+  "model": "mistral:7b-instruct"
+}
+```
+
+---
+
+> **Note:** To add screenshots, save them in `docs/screenshots/` folder with the filenames specified above.
+
+---
+
+## 7. Conclusion
 
 This project successfully demonstrates a **production-ready multi-turn conversational AI chatbot** using:
 
@@ -443,19 +465,3 @@ The system handles complex customer support scenarios including product inquirie
 
 ---
 
-## References
-
-1. Feng, S., et al. (2020). "doc2dial: A Goal-Oriented Document-Grounded Dialogue Dataset." *EMNLP 2020*.
-
-2. Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *NeurIPS 2020*.
-
-3. Jiang, A.Q., et al. (2023). "Mistral 7B." *arXiv preprint arXiv:2310.06825*.
-
-4. LangChain Documentation. https://python.langchain.com/
-
-5. ChromaDB Documentation. https://docs.trychroma.com/
-
----
-
-**Report Prepared By:** BITS Pilani Student  
-**Date:** December 2025

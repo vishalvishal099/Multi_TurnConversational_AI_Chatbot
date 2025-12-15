@@ -447,87 +447,10 @@ Bot: "I've checked your refund status:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 3.4 Error Handling for External APIs
-
-```python
-class APIIntegrationHandler:
-    async def call_with_fallback(self, api_func, fallback_message):
-        try:
-            result = await asyncio.wait_for(api_func(), timeout=5.0)
-            return {"success": True, "data": result}
-        except asyncio.TimeoutError:
-            return {"success": False, "fallback": fallback_message}
-        except Exception as e:
-            logger.error(f"API call failed: {e}")
-            return {"success": False, "fallback": fallback_message}
-```
-
-**Graceful Degradation Example:**
-```
-User: "Where is my order #TM98765?"
-[API Timeout]
-Bot: "I'm having trouble accessing real-time order information right now. 
-     Based on our standard processing times, orders typically ship within 
-     1-2 business days and arrive within 5-7 days for standard shipping.
-     
-     For immediate assistance with your order, please:
-     • Check your confirmation email for tracking info
-     • Contact us at support@techmart.com
-     • Call 1-800-TECHMART
-     
-     I apologize for the inconvenience!"
-```
 
 ---
 
-## 4. Implementation Roadmap
-
-### Phase 1: Intent Recognition (Week 1-2)
-- [ ] Define intent taxonomy
-- [ ] Collect/annotate training data
-- [ ] Train intent classification model
-- [ ] Implement clarification prompts
-- [ ] Add entity extraction
-
-### Phase 2: Personality Consistency (Week 3)
-- [ ] Define chatbot persona
-- [ ] Create enhanced system prompt
-- [ ] Implement response post-processing
-- [ ] Add sentiment detection
-- [ ] Create response templates
-
-### Phase 3: API Integration (Week 4-5)
-- [ ] Design API integration architecture
-- [ ] Implement OMS integration
-- [ ] Implement inventory API
-- [ ] Add shipping carrier integration
-- [ ] Implement error handling and fallbacks
-
-### Phase 4: Testing & Refinement (Week 6)
-- [ ] End-to-end testing
-- [ ] User acceptance testing
-- [ ] Performance optimization
-- [ ] Documentation update
-
----
-
-## 5. Expected Outcomes
-
-| Enhancement Area | Expected Improvement |
-|-----------------|---------------------|
-| Intent Recognition | 40% reduction in misrouted queries |
-| Personality Consistency | 90%+ consistent tone across sessions |
-| API Integration | Real-time data for 80% of order queries |
-| Overall User Satisfaction | 25% improvement in CSAT scores |
-
----
-
-## 6. Conclusion
+## 4. Conclusion
 
 These enhancements will transform the TechMart Chatbot from a basic Q&A system to an intelligent, context-aware customer support assistant. The combination of improved intent recognition, consistent personality, and real-time data integration will provide a significantly better user experience while reducing the load on human support agents.
 
----
-
-*Document Version: 1.0*  
-*Last Updated: December 2025*  
-*Author: [Your Name]*
