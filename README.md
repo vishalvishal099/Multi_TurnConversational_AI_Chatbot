@@ -229,7 +229,6 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 | [docs/DESIGN_REPORT.md](docs/DESIGN_REPORT.md) | Design choices & implementation challenges |
 | [docs/LITERATURE_REVIEW.md](docs/LITERATURE_REVIEW.md) | Academic literature review (Part B) |
 | [docs/enhancement_plan.md](docs/enhancement_plan.md) | Task B - Enhancement recommendations |
-| [docs/ENHANCEMENT_DETAILED.md](docs/ENHANCEMENT_DETAILED.md) | Advanced enhancements with code examples |
 
 ### 📄 Converting Literature Review to PDF
 
