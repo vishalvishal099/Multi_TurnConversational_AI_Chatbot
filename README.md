@@ -1,7 +1,6 @@
 ## 🎓 Academic Information
 **Group ID:** 81  
 **Assignment 1 - Problem Statement:** 12
-
 **Group Members:**
 
 | Name | BITS ID |
@@ -12,7 +11,7 @@
 | AVISHI GUPTA | 2024AA05055 |
 | AMANDEEP KAUR | 2024AA05200 |
 
-**Assignment Title:** Document-Based Question Answering System 
+**Assignment Title:** Document-Based Question Answering System
 **Course:** Natural Language Processing Applications  
 **Institution:** BITS Pilani
 
