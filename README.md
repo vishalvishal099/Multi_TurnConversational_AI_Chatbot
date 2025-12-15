@@ -1,3 +1,22 @@
+## 🎓 Academic Information
+**Group ID:** 81  
+**Assignment 1 - Problem Statement:** 12
+
+**Group Members:**
+
+| Name | BITS ID |
+|------|---------|
+| VISHAL SINGH | 2024AA05641 |
+| GOBIND SAH | 2024AA05643 |
+| YASH VERMA | 2024AA05640 |
+| AVISHI GUPTA | 2024AA05055 |
+| AMANDEEP KAUR | 2024AA05200 |
+
+**Assignment Title:** Document-Based Question Answering System 
+**Course:** Natural Language Processing Applications  
+**Institution:** BITS Pilani
+
+
 # TechMart Customer Support Chatbot
 
 A multi-turn conversational AI chatbot using RAG (Retrieval-Augmented Generation) pipeline with an open-source LLM, trained on **Doc2Dial** dialogue patterns.
@@ -215,11 +234,6 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 
 **Source:** Custom created for this assignment (see `backend/data/knowledge_base/techmart_support.md`)
 
-## 🎓 Academic Information
-
-**Course:** Natural Language Processing Applications  
-**Assignment:** Document-Based Question Answering System  
-**Institution:** BITS Pilani
 
 ## 📚 Documentation
 
@@ -230,23 +244,3 @@ The knowledge base is a custom-created dataset for TechMart (fictional company) 
 | [docs/LITERATURE_REVIEW.md](docs/LITERATURE_REVIEW.md) | Academic literature review (Part B) |
 | [docs/enhancement_plan.md](docs/enhancement_plan.md) | Task B - Enhancement recommendations |
 
-### 📄 Converting Literature Review to PDF
-
-```bash
-# Option 1: Using Pandoc (recommended)
-brew install pandoc basictex  # macOS
-pandoc docs/LITERATURE_REVIEW.md -o docs/LITERATURE_REVIEW.pdf \
-  --pdf-engine=pdflatex \
-  -V geometry:margin=1in \
-  -V fontsize=11pt
-
-# Option 2: Using VS Code
-# Install "Markdown PDF" extension, right-click → "Export (pdf)"
-
-# Option 3: Online converter
-# Upload to https://www.markdowntopdf.com/
-```
-
-## 📄 License
-
-This project is for educational purposes only.
